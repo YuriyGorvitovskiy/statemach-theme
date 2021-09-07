@@ -33,7 +33,7 @@ export interface Props {
 const MeasuringBox = (props: Props): React.ReactElement => {
   const classes = useStyles();
   const [ref, setRef] = React.useState<HTMLDivElement | null>();
-  const rect = ref?.getClientRects()[0];
+  const rect = ref?.getBoundingClientRect();
   return (
     <MuiGrid className={classes.root} container>
       <MuiGrid
