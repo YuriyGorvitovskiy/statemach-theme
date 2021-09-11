@@ -119,6 +119,56 @@ const theme = createTheme({
       root: {
         padding: "10px",
       },
+      colorPrimary: {
+        "&$checked": {
+          color: Color.WHITE_100,
+        },
+        "&$disabled": {
+          color: Color.PRIMARY_500,
+        },
+        "& + $track": {
+          backgroundColor: Color.PRIMARY_800,
+        },
+        "&$checked + $track": {
+          backgroundColor: Color.PRIMARY_500,
+        },
+        "&$disabled + $track": {
+          backgroundColor: Color.PRIMARY_200,
+        },
+      },
+      colorSecondary: {
+        "&$checked": {
+          color: Color.WHITE_100,
+        },
+        "&$disabled": {
+          color: Color.SECONDARY_500,
+        },
+        "& + $track": {
+          backgroundColor: Color.SECONDARY_800,
+        },
+        "&$checked + $track": {
+          backgroundColor: Color.SECONDARY_500,
+        },
+        "&$disabled + $track": {
+          backgroundColor: Color.SECONDARY_200,
+        },
+      },
+      switchBase: {
+        "&$checked": {
+          "&::after": {
+            content: "'\u2714'",
+            fontSize: "18px",
+            lineHeight: "18px",
+            transform: "translateX(-32px) translateY(-2px)",
+          },
+        },
+        "&$checked + $track": {
+          opacity: 1,
+        },
+        "&$disabled + $track": {
+          opacity: 1,
+        },
+      },
       thumb: {
         boxShadow: undefined,
         height: "16px",
@@ -127,6 +177,10 @@ const theme = createTheme({
       },
       track: {
         borderRadius: "12px",
+        opacity: 1,
+        "&$checked": {
+          content: "\u2713",
+        },
       },
     },
   },
