@@ -1,7 +1,7 @@
-import React from "react";
-import MuiTypography from "@material-ui/core/Typography";
 import MuiGrid from "@material-ui/core/Grid";
-import { makeStyles, createStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
+import MuiTypography from "@material-ui/core/Typography";
+import React from "react";
 import * as Color from "../style/color";
 
 const useStyles = makeStyles((theme) => ({

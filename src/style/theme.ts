@@ -78,15 +78,56 @@ const theme = createTheme({
   palette: {
     primary: {
       main: Color.PRIMARY_500,
+      light: Color.PRIMARY_200,
+      dark: Color.PRIMARY_800,
+      contrastText: Color.BLACK_900,
     },
     secondary: {
-      main: "#9C9A9B",
+      main: Color.SECONDARY_500,
+      light: Color.SECONDARY_200,
+      dark: Color.SECONDARY_800,
+      contrastText: Color.BLACK_900,
     },
     error: {
-      main: "#B86556",
+      main: Color.ERROR_500,
+      light: Color.ERROR_200,
+      dark: Color.ERROR_800,
+    },
+    success: {
+      main: Color.SUCCESS_500,
+      light: Color.SUCCESS_200,
+      dark: Color.SUCCESS_800,
+      contrastText: Color.BLACK_900,
+    },
+    warning: {
+      main: Color.WARNING_500,
+      light: Color.WARNING_200,
+      dark: Color.WARNING_800,
+      contrastText: Color.BLACK_900,
     },
     background: {
       default: "#FFFFFF",
+    },
+  },
+  overrides: {
+    MuiButton: {
+      contained: {
+        boxShadow: undefined,
+      },
+    },
+    MuiSwitch: {
+      root: {
+        padding: "10px",
+      },
+      thumb: {
+        boxShadow: undefined,
+        height: "16px",
+        margin: "2px",
+        width: "16px",
+      },
+      track: {
+        borderRadius: "12px",
+      },
     },
   },
 });
