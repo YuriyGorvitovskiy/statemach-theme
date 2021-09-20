@@ -6,6 +6,7 @@ import MuiTypography from "@material-ui/core/Typography";
 import React from "react";
 import DemoButton from "./demo/button";
 import DemoSwitch from "./demo/switch";
+import DemoTextField from "./demo/text-field";
 import DemoTypography from "./demo/typography";
 
 function Copyright() {
@@ -18,6 +19,7 @@ function Copyright() {
 enum Tab {
   BUTTON,
   SWITCH,
+  TEXT_FIELD,
   TYPOGRAPHY,
 }
 export default function App() {
@@ -36,6 +38,7 @@ export default function App() {
           >
             <MuiTab label="Button" />
             <MuiTab label="Switch" />
+            <MuiTab label="TextField" />
             <MuiTab label="Typography" />
           </MuiTabs>
         </MuiGrid>
@@ -44,6 +47,9 @@ export default function App() {
         </MuiGrid>
         <MuiGrid item hidden={tab !== Tab.SWITCH}>
           <DemoSwitch />
+        </MuiGrid>
+        <MuiGrid item hidden={tab !== Tab.TEXT_FIELD}>
+          <DemoTextField />
         </MuiGrid>
         <MuiGrid item hidden={tab !== Tab.TYPOGRAPHY}>
           <DemoTypography />

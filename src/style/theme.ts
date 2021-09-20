@@ -183,6 +183,12 @@ const theme = createTheme({
         },
       },
     },
+    MuiTextField: {},
+  },
+  props: {
+    MuiTextField: {
+      size: "small",
+    },
   },
 });
 
